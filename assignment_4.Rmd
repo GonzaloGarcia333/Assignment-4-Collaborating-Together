@@ -5,8 +5,8 @@ title: |
   | 2022-2023
 author: |
   | Your Name
-  | your_email@students.uu.nl
-  | http://www.github.com/yourgithubname
+  | g.garciatakis@students.uu.nl
+  | http://www.github.com/GonzaloGarcia333
 date: April 2023
 urlcolor: purple
 linkcolor: purple
