@@ -117,23 +117,12 @@ list(model1, model2, model3, model4) |>
 
 ```{r}
 library(kableExtra)
-library(dplyr)
-library(modelsummary)
+
 
 list(model1, model2, model3, model4) |>
-  modelsummary(stars=T, gof_map = c("nobs", "r.squared"))
+  modelsummary(stars=T, gof_map = c("nobs", "r.squared")) |>
+  row_spec(3, color = "white", background = "red")
 
-GrowthSW$treat_spec <- ifelse(GrowthSW$treat != 0, "background-color: red; color: white;", "")
-
-table <- GrowthSW %>%
-  kable(format = "html") %>%
-  kable_styling()
-
-table <- table %>%
-  row_spec(row = which(GrowthSW$treat != 0), style = GrowthSW$treat_spec)
-
-
-print(table)
 ```
 
 **Question 3.8**: Write a piece of code that exports this table (without the formatting) to a Word document. 
