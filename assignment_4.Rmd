@@ -60,6 +60,7 @@ print(datasummary)
 
 **Designated place**: type one or two sentences describing this table of a fellow student below. For example, comment on the mean and median growth of both groups. Then stage, commit and push it to their github repository. 
 
+The mean growth rate for countries with 0 revolutions (0 Revolutions) is higher (2.46) compared to countries with more than 0 revolutions (More than 0 Revolutions) which has a mean growth rate of 1.68. Similarly, the median growth rate for countries with 0 revolutions is higher (2.29) compared to countries with more than 0 revolutions which has a median growth rate of 1.92. This suggests that, on average, countries with 0 revolutions tend to have higher growth rates than countries with more than 0 revolutions.
 
 ### Part 3: Make a table summarizing reressions using modelsummary and kable
 
