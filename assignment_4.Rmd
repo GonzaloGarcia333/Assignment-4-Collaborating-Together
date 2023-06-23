@@ -129,6 +129,9 @@ list(model1, model2, model3, model4) |>
 **Question 3.8**: Write a piece of code that exports this table (without the formatting) to a Word document. 
 
 ```{r}
+library(flextable)
+library(officer)
+library(magrittr)
 
 ```
 
