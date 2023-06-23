@@ -53,7 +53,6 @@ One of the variables in the dataset is `revolutions`, the number of revolutions,
 library(modelsummary); library(tidyverse)
 GrowthSW$treat <- ifelse(GrowthSW$revolutions > 0, "More than 0 Revolutions", "0 Revolutions")
 datasummary <- datasummary(growth + rgdp60 ~ treat*(Mean + median + sd + min +max), data = GrowthSW)
-t()
 print(datasummary)
 
 ```
@@ -112,7 +111,8 @@ list(model1, model2, model3, model4) |>
 **Question 3.5**: Edit the code chunk above to remove many statistics from the table, but keep only the number of observations $N$, and the $R^2$ statistic. 
 
 **Question 3.6**: According to this analysis, what is the main driver of economic growth? Why?
-#According to this analysis, the min driver of economic growth... 
+#According to this analysis, the min driver of economic growth is the variable tradeshare, which has a positive correlation coeficient of 2.233, suggesting that a higher level of the variable trade share is positively associated with higher economic growth. 
+
 
 **Question 3.7**: In the code chunk below, edit the table such that the cells (including standard errors) corresponding to the variable `treat` have a red background and white text. Make sure to load the `kableExtra` library beforehand.
 
