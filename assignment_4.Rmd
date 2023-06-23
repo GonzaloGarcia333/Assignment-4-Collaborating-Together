@@ -76,7 +76,7 @@ print(t.test)
 ```
 
 **Question 3.2**: What is the $p$-value of the test, and what does that mean? Write down your answer below.
-#The p-value of the test was p-value = 0.06871, which indicates, with a t = 1.8531, df = 61.015, true difference in means is not equal to 0.  
+#The p-value of the test was p-value = 0.06871, which indicates, with a t = 1.8531, df = 61.015, true difference in means is not equal to 0. The p-value is greater than s.f of 0.05, we cannot conclude that the means of the two groups are significantly different.
 
 We can also control for other factors by including them in a linear model, for example:
 
@@ -129,10 +129,17 @@ list(model1, model2, model3, model4) |>
 **Question 3.8**: Write a piece of code that exports this table (without the formatting) to a Word document. 
 
 ```{r}
-library(flextable)
 library(officer)
-library(magrittr)
-
+library(kableExtra)
+table <- list(model1, model2, model3, model4) |>
+  modelsummary(stars = TRUE, gof_map = c("nobs", "r.squared")) |>
+  row_spec(3, color = "white", background = "red")
+df_table <- as.data.frame(table)
+table_file <- "table.docx"
+doc <- read_docx()
+doc <- body_add_table(doc, value = df_table)
+print(doc, target = table_file)
+```
 ```
 
 ## The End
